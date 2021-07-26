@@ -24,11 +24,11 @@ app.use(cors());
 app.use(helmet());
 
 //Paypal Section
-paypal.configure({
-    'mode': 'sandbox', //sandbox or live
-    'client_id': '####yourclientid######',
-    'client_secret': '####yourclientsecret#####'
-  });
+// paypal.configure({
+//     'mode': 'sandbox', //sandbox or live
+//     'client_id': '####yourclientid######',
+//     'client_secret': '####yourclientsecret#####'
+//   });
 
 const CLIENT = 'AcegV4pONjTEm7zcI3Z6Odju8d-oGSupI1hhzuLm6y7wjDuFXf02WzastrsPkXyDGAmC331xt1Jev_-j';
 const SECRET = 'ECeUXlF1RjJn04qS6so6o4_NKe8Pu8B9bRSzOWlNlVXcaZp1mnjyhSEHhB_dAul7FtgvTlMe3uR75U5l';
