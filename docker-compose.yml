@@ -21,6 +21,21 @@ services:
             - "./backend/utils.js:/code/utils.js"
             - "./backend/package.json:/code/package.json"
             - "./backend/package-lock.json:/code/package-lock.json"
+    # frontend:
+    #     build:
+    #         context: ./frontend
+    #     depends_on:
+    #         - backend
+    #     hostname: frontend
+    #     image: proyecto-final-frontend
+    #     ports:
+    #         - "5000:5000"
+    #     volumes:
+    #         - "./frontend/frontServer.js:/src/frontServer.js"
+    #         - "./frontend/views:/src/views"
+    #         # - "./backend/models:/code/models"
+    #         - "./frontend/package.json:/src/package.json"
+    #         - "./frontend/package-lock.json:/src/package-lock.json"
     mongo:
         image: mongo:latest
         environment:
