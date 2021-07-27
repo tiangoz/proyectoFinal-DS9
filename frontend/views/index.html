@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +10,7 @@
     <link href="../public/style/header.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/af562a2a63.js" crossorigin="anonymous"></script>
 
-    <script src="../public/js/header.js" type="text/javascript" defer></script>
+    <!-- <script src="../public/js/header.js" type="text/javascript" defer></script> -->
     <script src="../public/js/footer.js" type="text/javascript" defer></script>
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300i,400,700&display=swap" rel="stylesheet">
@@ -20,7 +19,8 @@
 
   <link rel="stylesheet" href="../public/style/footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-
+  
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Device Part</title>
 </head>
 
@@ -45,10 +45,10 @@
             <input class="input-open-search" id="open-search" type="checkbox" name="menu" />
             <div class="search">
                 <button class="button-search"><i class="fas fa-search"></i></button>
-                <input type="text" placeholder="¿Qué buscas?" class="input-search" />
+                <input type="text" placeholder="¿Qué producto buscas?" class="input-search" />
             </div>
         </label>
-        <!-- // search -->
+        <!-- search -->
         <nav class="nav-content">
             <nav>
             <ul class="nav-content-list">
@@ -57,14 +57,15 @@
 
                         <input class="input-menu" id="open-menu-login-account" type="checkbox" name="menu" />
 
-                        <i class="fas fa-user-circle"></i><span class="login-text">Hola, inicie sesión <strong>Crear
-                                cuenta</strong></span> <span class="item-arrow"></span>
+                        <i class="fas fa-user-circle"></i>
+                        <span class="login-text">Hola, inicie sesión <strong>Crear cuenta</strong></span>
+                        <span class="item-arrow"></span>
 
                         <!-- submenu -->
                         <ul class="login-list">
                             <li class="login-list-item"><a href="./login.html">Mi cuenta</a></li>
                             <li class="login-list-item"><a href="./SingUp.html">Crear cuenta</a></li>
-                            <li class="login-list-item"><a href="#">Salir</a></li>
+                            <li class="login-list-item"><a href="./login.html">Salir</a></li>
                     </label>
             </ul>
             </li>
@@ -74,40 +75,13 @@
             </ul>
         </nav>
     </div-->
-    
-
-    <!--iframe src="header.html"-->
 
 </header>
 
 <body>
 
-    <!--iframe src="header.html" name="header" height="500px" width="100px"></iframe><br><br><br><br-->
-    <!--link rel="import" href="header.html"-->
-    <!--object data="./header.html" width="100%" height="250px">
-        <embed src="./header.html" width="100%" height="100%"> </embed>
-        Error: Embedded data could not be displayed.
-    </object-->
-    <!--header-component></header-component-->
-
-    <!--main-->
-
-
-    <!--iframe src="../views/product.html"></iframe><br><br><br><br><br><br><br><br><br><br><br><br-->
-
-    <!--link id="template-file" rel="import" href="/Semestral/frontend/product/product.html"/-->
-    <!--iframe src="product/product.html" scrolling="no" frameborder="500px" id="inlineFrameExample"></iframe-->
-    <!--/main-->
-
-    
-
-
-    <!--iframe src="footer.html" scrolling="no" frameborder="500px" id="inlineFrameExample"></iframe-->
-    <!--link id="template-file" rel="import" href="footer.html"/-->
-    <!--footer-component></footer-component-->
-
-    <div class="gallery">
-      <div class="content">
+    <div class="gallery" id="iteams-list">
+      <!-- <div class="content">
         <img src="../public/img/headP.crdownload">
         <h3>Audífono</h3>
         <p>Audifonos grandes inalambrico</p>
@@ -119,42 +93,14 @@
           <li><i class="fa fa-star" aria-hidden="true"></i></li>
           <li><i class="fa fa-star" aria-hidden="true"></i></li>
         </ul>
-        <button class="buy-1">Buy Now</button>
-      </div>
-      <div class="content">
-        <img src="../public/img/earphone.png">
-        <h3>Audífono</h3>
-        <p>Audifono inalambrico recargable.</p>
-        <h6>$40.00</h6>
-        <ul>
-          <li><i class="fa fa-star" aria-hidden="true"></i></li>
-          <li><i class="fa fa-star" aria-hidden="true"></i></li>
-          <li><i class="fa fa-star" aria-hidden="true"></i></li>
-          <li><i class="fa fa-star" aria-hidden="true"></i></li>
-          <li><i class="fa fa-star" aria-hidden="true"></i></li>
-        </ul>
-        <button class="buy-2">Buy Now</button>
-      </div>
-      <div class="content">
-        <img src="../public/img/watch.png">
-        <h3>Reloj</h3>
-        <p>Reloj para hombres de buena marca</p>
-        <h6>$70.84</h6>
-        <ul>
-          <li><i class="fa fa-star" aria-hidden="true"></i></li>
-          <li><i class="fa fa-star" aria-hidden="true"></i></li>
-          <li><i class="fa fa-star" aria-hidden="true"></i></li>
-          <li><i class="fa fa-star" aria-hidden="true"></i></li>
-          <li><i class="fa fa-star" aria-hidden="true"></i></li>
-        </ul>
-        <button class="buy-3">Buy Now</button>
-      </div>
+        <button name="cart" class="buy-1" id="123">Añadir al Carrito</button>
+      </div> -->
     </div>
 
 </body>
 
 <footer>
-    <!--div class="content">
+    <!-- div class="content">
       <div class="left box">
         <div class="upper">
           <div class="topic">Nosotros</div>
@@ -196,9 +142,6 @@
     <div class="bottom">
       <p>Copyright © 2021 <a href="./index.html">Device Part</a> todos los derechos reservados</p>
     </div-->
-
-    <!--iframe src="footer.html"></iframe-->
-
   </footer>
-
+  <script src="../public/js/index.js"></script>
 </html>

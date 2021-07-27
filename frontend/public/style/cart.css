@@ -1,5 +1,23 @@
 /* Global settings */
 /* Global "table" column settings */
+html {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  /* padding: 0px 30px 30px 20px; */
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+
+.global-container-cart {
+  margin: 25px 50px 25px 50px;
+  padding: 50px;
+  border: 5px solid red;
+}
 .product-image {
     float: left;
     width: 20%;
@@ -68,13 +86,6 @@
   }
   
   /* Body/Header stuff */
-  body {
-    padding: 0px 30px 30px 20px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 100;
-    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
-background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
-  }
   
   h1 {
     font-weight: 100;
@@ -86,6 +97,7 @@ background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
   
   .shopping-cart {
     margin-top: -45px;
+    border: 5px solid blue;
   }
   
   /* Column headers */
