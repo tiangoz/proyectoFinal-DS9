@@ -32,15 +32,15 @@
                     password: userPassword
                 })
                 //Redirrecionamiento al login
-                swal({
-                    title: "Usuario Registrado",
-                    text: "Da clic, para iniciar sesión",
-                    icon: "success",
-                    button: "Iniciar Sesión",
-                    })
-                    .then(() => {
-                        App.routes.signUp();
-                    });
+                // swal({
+                //     title: "Usuario Registrado",
+                //     text: "Da clic, para iniciar sesión",
+                //     icon: "success",
+                //     button: "Iniciar Sesión",
+                //     })
+                //     .then(() => {
+                //     });
+                    App.routes.signUp();
             },
         },
         endpoints: {

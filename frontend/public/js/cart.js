@@ -32,7 +32,7 @@
                 App.htmlElements.carTax.innerHTML = tax
 
                 let shipping = Number(App.htmlElements.cartShipping);
-                let total = (subtotal + tax + shipping).toFixed(2)
+                let total = Number((subtotal + tax + shipping).toFixed(2));
                 App.htmlElements.carTotal.innerHTML = total
                 App.htmlElements.carTotal.value = total
             },
@@ -69,12 +69,12 @@
                     console.log('no es el classlist')
                 }
                 //alerta de agregado un articulo
-                swal({
-                    title: "Eliminado",
-                    text: "El artículo se ha Eliminado",
-                    icon: "success",
-                    button: "Continuar con la Compra",
-                    })
+                // swal({
+                //     title: "Eliminado",
+                //     text: "El artículo se ha Eliminado",
+                //     icon: "success",
+                //     button: "Continuar con la Compra",
+                //     })
                 App.htmlElements.sum = 0;
                 App.htmlElements.itemsList.innerHTML="";
                 App.initializeData.showItems();

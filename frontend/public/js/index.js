@@ -50,12 +50,12 @@
                     id: id
                 });
                 //alerta de agregado un articulo
-                swal({
-                    title: "Agregado",
-                    text: "El articulo se ha agregado",
-                    icon: "success",
-                    button: "Continuar Comprando",
-                    })
+                // swal({
+                //     title: "Agregado",
+                //     text: "El articulo se ha agregado",
+                //     icon: "success",
+                //     button: "Continuar Comprando",
+                //     })
             },
         },
         endpoints: {
