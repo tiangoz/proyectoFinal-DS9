@@ -7,11 +7,13 @@
             cartShipping: document.getElementById('cart-shipping').innerHTML,
             carTotal: document.getElementById('cart-total'),
             sum: 0,
+            paypalPay: document.getElementById('paypal-pay'),
         },
         init: () => {
             App.bindEvents();
             App.initializeData.showItems();
             App.htmlElements.itemsList.addEventListener('click', App.events.itemsList)
+            App.htmlElements.paypalPay.addEventListener('click', App.events.paypalPay)
         },
         bindEvents: () => {
         },
@@ -32,6 +34,7 @@
                 let shipping = Number(App.htmlElements.cartShipping);
                 let total = (subtotal + tax + shipping).toFixed(2)
                 App.htmlElements.carTotal.innerHTML = total
+                App.htmlElements.carTotal.value = total
             },
         },
         events: {
@@ -76,6 +79,12 @@
                 App.htmlElements.itemsList.innerHTML="";
                 App.initializeData.showItems();
             },
+            paypalPay: async (e) => {
+                    console.log(App.htmlElements.carTotal.value)
+                    window.location.href = await App.endpoints.createPayment({
+                        value: App.htmlElements.carTotal.value
+                    });
+            }
         },
         endpoints: {
             getCart: () => {
@@ -86,6 +95,9 @@
             },
             removeToCart: (id) => {
                 return App.utils.removeItem(`http://localhost:3000/api/v1/cart/items/remove/${id}`)
+            },
+            createPayment: (payload) => {
+                return App.utils.postCreatePayment(`http://localhost:3000/api/v1/create-payment`, payload)
             },
         },
         utils: {
@@ -105,6 +117,14 @@
                     headers: { "Content-Type": "application/json",},
                 });
                 return response;
+            },
+            postCreatePayment: async (url = '', data = {}) => {
+                const response = await fetch(url, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json",},
+                    body: JSON.stringify(data),
+                });
+                return response.json();
             },
         },
         routes: {
