@@ -2,6 +2,11 @@
     const App = {
         htmlElements: {
             itemsList: document.getElementById('iteams-list'),
+            cartSubtotal: document.getElementById('cart-subtotal'),
+            carTax: document.getElementById('cart-tax'),
+            cartShipping: document.getElementById('cart-shipping').innerHTML,
+            carTotal: document.getElementById('cart-total'),
+            sum: 0,
         },
         init: () => {
             App.bindEvents();
@@ -16,6 +21,17 @@
                 for(var i=0;i<data.length;i++) {
                     App.events.idCartItems(data[i]);
                 }
+            },
+            costToPay: async () => {
+                const itbms = 0.07;
+                let subtotal = Number(App.htmlElements.cartSubtotal.innerHTML);
+
+                let tax = Number((subtotal * itbms).toFixed(2));
+                App.htmlElements.carTax.innerHTML = tax
+
+                let shipping = Number(App.htmlElements.cartShipping);
+                let total = (subtotal + tax + shipping).toFixed(2)
+                App.htmlElements.carTotal.innerHTML = total
             },
         },
         events: {
@@ -37,12 +53,17 @@
                 </div>
                 `;
                 App.htmlElements.itemsList.innerHTML += newDiv
+                App.htmlElements.sum = (Number(App.htmlElements.sum) + Number(price))
+                App.htmlElements.cartSubtotal.innerHTML = App.htmlElements.sum
+                App.initializeData.costToPay();
             },
             itemsList: async (e) => {
                 e.preventDefault();
                 if(e.target.classList=="remove-product"){
                     let id = e.target.parentNode.querySelector('button[name="remove"]').id
                     await App.endpoints.removeToCart(id);
+                } else {
+                    console.log('no es el classlist')
                 }
                 //alerta de agregado un articulo
                 swal({
@@ -51,6 +72,7 @@
                     icon: "success",
                     button: "Continuar con la Compra",
                     })
+                App.htmlElements.sum = 0;
                 App.htmlElements.itemsList.innerHTML="";
                 App.initializeData.showItems();
             },
