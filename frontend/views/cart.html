@@ -7,37 +7,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../public/style/cart.css">
 
-  <!-- <link rel="stylesheet" href="../public/style/footer.css">
+  <link rel="stylesheet" href="../public/style/footer.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <title>Cart-User</title>
+  <title>Carrito de compra</title>
 </head>
 
 <body>
-  <div class="global-container-cart">
-    <h1>Shopping Cart</h1>
+  <!--<div class="global-container-cart">
+    <h1>Carrito de compra</h1>
     <br>
     <div class="shopping-cart">
       <div class="column-labels">
-        <label class="product-price">Product</label>
+        <label class="product-price">Producto</label>
         <label class="product-price">delete</label>
-        <label class="product-price">Price</label>
-        <label class="product-removal">Remove</label>
+        <label class="product-price">Precio</label>
+        <label class="product-removal">Remover</label>
         <label class="product-line-price">Total</label>
       </div>
 
       <div id="iteams-list">
-        <!-- <div class="product">
+        <div class="product">
           <div class="product-details">
             <div class="product-title">Audifono</div>
             <p class="product-description">Audifono inalambrico recargable.</p>
           </div>
           <div class="product-removal">
-            <button class="remove-product">Remove</button>
+            <button class="remove-product">Remover</button>
           </div>
           <div class="product-line-price">40.00</div>
-        </div> -->
+        </div>
       </div>
 
       <div class="totals">
@@ -54,17 +54,64 @@
           <div class="totals-value" id="cart-shipping">12.00</div>
         </div>
         <div class="totals-item totals-item-total">
-          <label>Grand Total</label>
+          <label>Total</label>
           <div class="totals-value" id="cart-total">129.44</div>
         </div>
       </div>
 
-      <button class="checkout"><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png"
-          alt="Check out with PayPal" /></button>
+      <button class="checkout"><img
+          src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png"
+          alt="Check out with PayPal" /></button> -->
       <!--script src="https://www.paypal.com/sdk/js?client-id=test"></script>
   <script>paypal.Buttons().render('body');</script-->
-    </div>
-  </div>
+    <!--/div>
+  </div> -->
   <script src="../public/js/cart.js"></script>
 </body>
+
+<footer>
+  <div class="content">
+    <div class="left box">
+      <div class="upper">
+        <div class="topic">Nosotros</div>
+        <p>Device Parts, es un emprendimiento sobre venta de partes de dispositivos
+          electrónicos, en la cual tambien puedes solicitar pedidos.</p>
+      </div>
+      <div class="lower">
+        <div class="topic">Contact us</div>
+        <div class="phone">
+          <a href="#"><i class="fas fa-phone-volume"></i>+507 204 6767</a>
+        </div>
+        <div class="email">
+          <a href="#"><i class="fas fa-envelope"></i>clientedp@dp.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="middle box">
+      <div class="topic">Nuestros servicios</div>
+      <div><a href="#">Partes de dispositivos electrónicos</a></div>
+      <div><a href="#">Pedidos</a></div>
+      <div><a href="#">Reparaciones</a></div>
+      <div><a href="#">Mantenimiento</a></div>
+    </div>
+    <div class="right box">
+      <div class="topic">Suscribete</div>
+      <form action="#">
+        <input type="text" placeholder="Correo electrónico">
+        <input type="submit" name="" value="Send">
+        <div class="media-icons">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="bottom">
+    <p>Copyright © 2021 <a href="./index.html">Device Part</a> todos los derechos reservados</p>
+  </div>
+</footer>
+
 </html>
